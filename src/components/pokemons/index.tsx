@@ -1,9 +1,8 @@
-
 import { useQuery, gql } from '@apollo/client'
 
 const POKEMONS = gql`
   query {
-    pokemons (first: 10000) {
+    pokemons(first: 10000) {
       name
       image
       types
@@ -26,14 +25,10 @@ const POKEMONS = gql`
 const Pokemons = (): React.ReactElement => {
   const { loading, error, data } = useQuery(POKEMONS)
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p>Loading...</p>
   if (error) console.log(error)
-  
-  return data.pokemons.map((i, key) => (
-      <p key={key}>{i.name}</p>
-  ))
+
+  return data.pokemons.map((i, key) => <p key={key}>{i.name}</p>)
 }
 
-export {
-    Pokemons
-}
+export { Pokemons }
