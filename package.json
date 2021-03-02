@@ -1,0 +1,55 @@
+{
+  "name": "pokechi",
+  "version": "1.0.0",
+  "description": "Next.js & graphql Pokemon Database",
+  "main": "src/pagnpmindex.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev -p 8080",
+    "lint": "eslint --fix",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hafizhrf/pokechi.git"
+  },
+  "keywords": [
+    "pokemon",
+    "graphql",
+    "react",
+    "typescript"
+  ],
+  "author": "Hafizh Rifqi Fabian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hafizhrf/pokechi/issues"
+  },
+  "homepage": "https://github.com/hafizhrf/pokechi#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "next": "^10.0.7",
+    "next-images": "^1.6.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.9",
+    "@types/react": "^17.0.0",
+    "@types/styled-components": "^5.1.4",
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
+    "babel-plugin-styled-components": "^1.12.0",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.2.0",
+    "typescript": "^4.1.2"
+  }
+}
