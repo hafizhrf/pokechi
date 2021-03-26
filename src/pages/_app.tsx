@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { NextComponentType } from 'next'
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import { ApolloClient, InMemoryCache, ApolloProvider  } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 
 import 'normalize.css'
 
@@ -15,8 +15,8 @@ interface Props {
 
 const client = new ApolloClient({
   uri: 'https://graphql-pokemon2.vercel.app',
-  cache: new InMemoryCache()
-});
+  cache: new InMemoryCache(),
+})
 
 const theme = createMuiTheme({
   // palette: {

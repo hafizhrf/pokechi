@@ -1,4 +1,6 @@
 import { useQuery, gql } from '@apollo/client'
+import { Grid } from '@material-ui/core'
+import PokemonCard from '../card'
 
 const POKEMONS = gql`
   query {
@@ -23,12 +25,19 @@ const POKEMONS = gql`
 `
 
 const Pokemons = (): React.ReactElement => {
-  const { loading, error, data } = useQuery(POKEMONS)
+  const { loading, data } = useQuery<PokemonList>(POKEMONS)
 
   if (loading) return <p>Loading...</p>
-  if (error) console.log(error)
 
-  return data.pokemons.map((i, key) => <p key={key}>{i.name}</p>)
+  return (
+    <Grid container spacing={2}>
+      {data.pokemons.map((pokemon, key) => (
+        <Grid key={key} item md={4} sm={6}>
+          <PokemonCard pokemon={pokemon} />
+        </Grid>
+      ))}
+    </Grid>
+  )
 }
 
 export { Pokemons }
